@@ -27,7 +27,7 @@ M.open = function()
     { buf = v.buf, layout = layout, xpad = v.xpad, ns = v.ns },
   }
 
-  local h = mark_state[v.buf].h
+  local h = mark_state.get(v.buf).h
 
   local left_win_pos = (function()
     if config.position == "cursor" then

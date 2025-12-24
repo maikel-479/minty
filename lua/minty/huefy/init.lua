@@ -43,7 +43,7 @@ M.open = function()
     { buf = v.tools_buf, layout = layout.tools, xpad = v.xpad, ns = v.paletteNS },
   }
 
-  local h = mark_state[v.palette_buf].h
+  local h = mark_state.get(v.palette_buf).h
 
   -- handle fallback col | if less space is there for window
   local cur_pos = api.nvim_win_get_cursor(0)
